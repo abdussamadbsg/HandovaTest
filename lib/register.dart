@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:handova/my_orders.dart';
 import 'package:handova/rounded_button.dart';
-import 'package:handova/welcome_screen.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -194,7 +194,7 @@ class _RegisterState extends State<Register> {
                   action: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => WelcomeScreen()),
+                      MaterialPageRoute(builder: (context) => MyOrders()),
                     );
                   },
                 ),

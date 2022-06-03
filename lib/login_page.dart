@@ -22,98 +22,100 @@ class _LogInState extends State<LoginPage> {
             onPressed: () => Navigator.of(context).pop(),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text('Enter Phone Number',
+        body: ListView(children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text('Enter Phone Number',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    )),
+                SizedBox(
+                  height: 5.0,
+                ),
+                Text(
+                  'Login with your registered phone',
                   textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                  )),
-              SizedBox(
-                height: 5.0,
-              ),
-              Text(
-                'Login with your registered phone',
-                textAlign: TextAlign.start,
-              ),
-              Text(
-                'number.',
-                textAlign: TextAlign.start,
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 120,
-                    child: Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TextFormField(
-                          controller: numberController,
-                          decoration: InputDecoration(
-                              fillColor: Colors.blueAccent,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              labelText: 'NG (+234)'),
+                ),
+                Text(
+                  'number.',
+                  textAlign: TextAlign.start,
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 120,
+                      child: Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: numberController,
+                            decoration: InputDecoration(
+                                fillColor: Colors.blueAccent,
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                labelText: 'NG (+234)'),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 250,
-                    child: Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TextFormField(
-                          controller: numberController,
-                          decoration: InputDecoration(
-                              fillColor: Colors.blueAccent,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              labelText: 'Phone Number'),
+                    SizedBox(
+                      width: 250,
+                      child: Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: numberController,
+                            decoration: InputDecoration(
+                                fillColor: Colors.blueAccent,
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                labelText: 'Phone Number'),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 15),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: TextFormField(
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      labelText: "Password",
+                  ],
+                ),
+                SizedBox(height: 15),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: TextFormField(
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        labelText: "Password",
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 30),
-              RoundedButton(
-                buttonName: 'Log In',
-                buttonColor: Colors.blueAccent,
-                action: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MyOrders()),
-                  );
-                },
-              ),
-              SizedBox(height: 30),
-              Text(
-                'Forget Password?',
-                textAlign: TextAlign.center,
-              ),
-            ],
+                SizedBox(height: 30),
+                RoundedButton(
+                  buttonName: 'Log In',
+                  buttonColor: Colors.blueAccent,
+                  action: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyOrders()),
+                    );
+                  },
+                ),
+                SizedBox(height: 30),
+                Text(
+                  'Forget Password?',
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
-        ));
+        ]));
   }
 }
